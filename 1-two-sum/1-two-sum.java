@@ -9,8 +9,8 @@ class Solution {
             int searchValue = target - value;
 
             if(valueMap.get(searchValue) != null) {
-                result[0] = Math.min(i, valueMap.get(searchValue));
-                result[1] = Math.max(i, valueMap.get(searchValue));
+                result[0] = valueMap.get(searchValue);
+                result[1] = i;
                 break;
             }else {
                 valueMap.put(value, i);
