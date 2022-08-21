@@ -8,8 +8,9 @@ class Solution {
             int value = nums[i];
             int searchValue = target - value;
 
-            if(valueMap.get(searchValue) != null) {
-                result[0] = valueMap.get(searchValue);
+            int idex = valueMap.getOrDefault(searchValue, -1);
+            if(idex != -1) {
+                result[0] = idex;
                 result[1] = i;
                 break;
             }else {
