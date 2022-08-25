@@ -3,9 +3,14 @@ class Solution {
         if(x < 0) return false;
 
         String str = String.valueOf(x);
-        StringBuffer sb = new StringBuffer(String.valueOf(x));
-        sb.reverse();
 
-        return str.equals(sb.toString());
+        int startIdx = 0;
+        for(int endIdx=str.length()-1; startIdx<=endIdx; endIdx--, startIdx++) {
+            if(str.charAt(startIdx) != str.charAt(endIdx)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
