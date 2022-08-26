@@ -16,8 +16,7 @@ class Solution {
         ListNode left = list1;
         ListNode right = list2;
 
-        while(left != null || right !=null) {
-            if(Objects.nonNull(left) && Objects.nonNull(right)) {
+        while(left != null && right !=null) {
                 if(left.val == right.val) {
                     appendNode.next = left;
                     left = left.next;
@@ -33,17 +32,12 @@ class Solution {
                     appendNode = left;
                     left = left.next;
                 }
-            }else {
-                if(Objects.nonNull(left)) {
-                    appendNode.next = left;
-                    appendNode = left;
-                    left = left.next;
-                }else {
-                    appendNode.next = right;
-                    appendNode = right;
-                    right = right.next;
-                }
-            }
+        }
+        
+        if(Objects.nonNull(left)) {
+            appendNode.next = left;
+        }else {
+            appendNode.next = right;
         }
 
         return main.next;
