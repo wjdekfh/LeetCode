@@ -7,7 +7,7 @@ class Solution {
             int value = nums1[i];
             
             if(value == 0 && nums1Idx >= m) {
-                value = 999;
+                value = 1000000001;
             }
             
             queue.add(value);
