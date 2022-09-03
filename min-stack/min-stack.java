@@ -26,12 +26,6 @@ class MinStack {
     }
     
     public int getMin() {
-//         int min = stack.get(0);
-        
-//         for(int i=0; i<stack.size(); i++) {
-//             min = Math.min(min, stack.get(i));
-//         }
-        
         return min;
     }
 }
