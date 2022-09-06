@@ -18,19 +18,19 @@ class Solution {
     
     public List<Integer> postorderTraversal(TreeNode root) {
         if(root != null) {
-            inorderTree(root);
+            postOrderTree(root);
         }
         
         return orderValue;
     }
     
-    public void inorderTree(TreeNode node) {
+    public void postOrderTree(TreeNode node) {
         if(node.left != null) {
-            inorderTree(node.left);
+            postOrderTree(node.left);
         }
         
         if(node.right != null) {
-            inorderTree(node.right);
+            postOrderTree(node.right);
         }
         
         orderValue.add(node.val);
